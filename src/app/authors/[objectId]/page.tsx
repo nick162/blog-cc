@@ -25,8 +25,8 @@ const AboutAuthorDetail = async ({
     }
 
     return (
-      <main className="max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-2xl mt-10">
-        <div className="flex flex-col items-center text-center">
+      <main className="w-[100%] mx-auto p-8 bg-white rounded-2xl mt-10 md:mb-32">
+        <div className="flex flex-col items-center text-center mb-20">
           {/* Avatar */}
           <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-lg border-4 border-blue-500">
             <Image

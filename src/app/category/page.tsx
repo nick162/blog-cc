@@ -9,8 +9,21 @@ import BlogListHeader from "../blog/list/_components/BlogListHeader";
 import BlogListBody from "../blog/list/_components/BlogListBody";
 import useGetBLogs from "@/hooks/api/blog/useGetBLogs";
 import PopularCategory from "./popularCategory/page";
+import { Metadata } from "next";
 
-// Data dummy untuk tes
+const AboutMetadata: Metadata = {
+  title: "About StarbLogIndo - Popular Flower Blog",
+  description: "Discover the latest updates and articles",
+  keywords: [
+    "Indo",
+    "popular blogs",
+    "person",
+    "significancnt",
+    "sport",
+    "Health",
+    "Politics",
+  ],
+};
 
 const LIMIT = 4;
 const BlogList = () => {

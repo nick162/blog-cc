@@ -32,7 +32,7 @@ const Navbar = () => {
                   Home
                 </p>
               </Link>
-              <Link href="/category">
+              <Link href="/category/feature">
                 <p className={`${poppins.className} text-xl font-semibold`}>
                   Categories
                 </p>
@@ -70,7 +70,10 @@ const Navbar = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   {" "}
-                  <Link href="/category" className="hover:text-[#b6895b] ">
+                  <Link
+                    href="/category/feature"
+                    className="hover:text-[#b6895b] "
+                  >
                     Category
                   </Link>
                 </DropdownMenuItem>

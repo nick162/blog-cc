@@ -4,7 +4,13 @@ import axios from "axios";
 import { User } from "@/types/user";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 
+const AboutMetadata: Metadata = {
+  title: "About StarbLogIndo - Popular Flower Blog",
+  description: "Discover the latest updates and articles",
+  keywords: ["Indo", "popular blogs", "person", "significancnt"],
+};
 const About = () => {
   const [authors, setAuthors] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
