@@ -44,6 +44,7 @@ const Category = () => {
           {categories.map((category) => (
             <li key={category}>
               <button
+                name="selectCategory"
                 onClick={() => setSelectedCategory(category)}
                 className={`w-full text-left px-4 py-2 rounded-lg transition md:mb-12 ${
                   selectedCategory === category

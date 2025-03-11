@@ -14,13 +14,25 @@ const FooterContact = () => {
 
         {/* Social Media Links */}
         <div className="flex space-x-4">
-          <Link href="#" className="text-white hover:text-blue-500">
+          <Link
+            href="#"
+            className="text-white hover:text-blue-500"
+            aria-label="Facebook"
+          >
             <FaFacebook size={24} />
           </Link>
-          <Link href="#" className="text-white hover:text-blue-400">
+          <Link
+            href="#"
+            className="text-white hover:text-blue-400"
+            aria-label="Twitter"
+          >
             <FaTwitter size={24} />
           </Link>
-          <Link href="#" className="text-white hover:text-pink-500">
+          <Link
+            href="#"
+            className="text-white hover:text-pink-500"
+            aria-label="Instagram"
+          >
             <FaInstagram size={24} />
           </Link>
         </div>

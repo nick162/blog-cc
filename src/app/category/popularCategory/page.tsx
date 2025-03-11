@@ -42,7 +42,7 @@ const PopularCategory = () => {
         {blogs.map((blog) => (
           <div
             key={blog.objectId}
-            className="bg-gray-100 rounded-lg shadow-md overflow-hidden"
+            className="bg-gray-300 rounded-lg shadow-md overflow-hidden"
           >
             <Image
               src={blog.image}
@@ -58,7 +58,7 @@ const PopularCategory = () => {
                 </h3>
               </Link>
               <p className="text-sm text-gray-700 mt-2">{blog.description}</p>
-              <p className="text-sm text-gray-500 mt-2">{blog.views} views</p>
+              <p className="text-sm text-gray-700 mt-2">{blog.views} views</p>
             </div>
           </div>
         ))}

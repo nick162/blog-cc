@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 
 const Navbar = () => {
   return (
-    <section className="navbar bg-gray-100">
+    <section className="navbar bg-gray-300">
       <nav className="navbar-menu">
         <div className="container mx-auto p-4 ">
           <div className="flex justify-between gap-4">
