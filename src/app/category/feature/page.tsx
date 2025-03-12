@@ -4,6 +4,8 @@ import { useState, useEffect, Suspense } from "react";
 import Blog from "@/types/blog";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
+import { Fullscreen } from "lucide-react";
 
 const API_URL =
   "https://popularflower-us.backendless.app/api/data/blog?where=%60category%60%20%3D%20'";
@@ -66,7 +68,7 @@ const Category = () => {
         </h2>
 
         {loading ? (
-          <p className="text-center text-gray-500">Loading blogs...</p>
+          <p className="text-center text-gray-white">Loading blogs...</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogs.length > 0 ? (
@@ -75,10 +77,12 @@ const Category = () => {
                   key={blog.objectId}
                   className="bg-white rounded-lg shadow-md overflow-hidden"
                 >
-                  <img
+                  <Image
                     src={blog.image}
                     alt={blog.title}
                     className="w-full h-40 object-cover"
+                    height={40}
+                    width={100}
                   />
                   <div className="p-4">
                     <Link href={`/blog/${blog.slug}`}>
@@ -86,7 +90,7 @@ const Category = () => {
                         {blog.title}
                       </h3>
                     </Link>
-                    <p className="text-sm text-gray-700 mt-2">
+                    <p className="text-sm text-gray-700 mt-2 line-clamp-3">
                       {blog.description}
                     </p>
                     <p className="text-sm text-gray-500 mt-2">

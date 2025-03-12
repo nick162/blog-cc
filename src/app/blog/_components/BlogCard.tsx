@@ -10,23 +10,28 @@ interface BlogCardProps {
 const BlogCard: FC<BlogCardProps> = ({ blog }) => {
   return (
     <Link href={`/blog/${blog.slug}`}>
-      <Card className="bg-white shadow-lg">
-        <CardHeader>
-          <div className="relative w-full h-[220px] rounded-lg overflow-hidden">
-            <Image
-              src={blog.image}
-              alt="thumbnail"
-              fill
-              className=""
-              unoptimized={true}
-            />
-          </div>
-        </CardHeader>
-        <CardContent>
-          <h2 className="text-xl font-bold">{blog.title}</h2>
-          <p className="line-clamp-4">{blog.description}</p>
-        </CardContent>
-      </Card>
+      <div
+        key={blog.objectId}
+        className="bg-gray-white rounded-lg shadow-md overflow-hidden"
+      >
+        <Image
+          src={blog.image}
+          alt={blog.title}
+          className="w-full h-48 object-cover"
+          width={100}
+          height={48}
+        />
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-blue-600 hover:underline cursor-pointer">
+            {blog.title}
+          </h3>
+
+          <p className="text-sm text-gray-700 mt-2 line-clamp-3">
+            {blog.description}
+          </p>
+          <p className="text-sm text-gray-700 mt-2">{blog.views} views</p>
+        </div>
+      </div>
     </Link>
   );
 };
