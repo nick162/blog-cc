@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 import { useDebounceValue } from "usehooks-ts";
 
@@ -10,6 +10,7 @@ import BlogListBody from "../blog/list/_components/BlogListBody";
 import useGetBLogs from "@/hooks/api/blog/useGetBLogs";
 import PopularCategory from "./popularCategory/page";
 import { Metadata } from "next";
+import Loading from "@/components/Loading";
 
 const AboutMetadata: Metadata = {
   title: "About StarbLogIndo - Popular Flower Blog",
@@ -54,6 +55,7 @@ const BlogList = () => {
       />
 
       {/* BlogListBody */}
+
       <BlogListBody isPending={isPending} blogs={blogs?.data} />
 
       {/* Pagination */}

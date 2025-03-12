@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import BlogList from "./_components/BlogList";
 
-import BlogSkeleton from "./_components/BlogSkeleton";
 import { Metadata } from "next";
+import Loading from "@/components/Loading";
 
 const AboutMetadata: Metadata = {
   title: "About StarbLogIndo - Popular Flower Blog",
@@ -12,7 +12,7 @@ const AboutMetadata: Metadata = {
 const Blogs = () => {
   return (
     <main>
-      <Suspense fallback={<BlogSkeleton />}>
+      <Suspense fallback={<Loading />}>
         <BlogList />
       </Suspense>
     </main>
